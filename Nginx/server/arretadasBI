@@ -1,0 +1,8 @@
+server {
+        listen 80;
+
+        root /app-bi;
+        index index.html;
+        
+        server_name arretadas-bi.tk;
+}
