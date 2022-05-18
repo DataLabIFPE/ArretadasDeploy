@@ -28,16 +28,16 @@ services:
       - services
     depends_on:
       - redis
-      #- app-bot
+      - app-bot
 
-#  app-bot:
-#   build:
-#     context: Arretadas-bot/
-#     dockerfile: Dockerfile
-#    networks:
-#      - queue
-#    depends_on:
-#      - redis
+  app-bot:
+    build:
+      context: Arretadas-bot/
+      dockerfile: Dockerfile
+    networks:
+      - queue
+    depends_on:
+      - redis
 
 networks:
   queue:
