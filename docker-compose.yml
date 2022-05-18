@@ -19,7 +19,7 @@ services:
 
   app-api:
     build:
-      context: Arretadas-API/
+      context: Arretadas-api/
       dockerfile: Dockerfile
     ports:
       - '3000:3000'
