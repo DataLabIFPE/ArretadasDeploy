@@ -20,5 +20,5 @@ RUN service nginx restart
 
 EXPOSE 80
 
-#ENTRYPOINT ["/usr/sbin/nginx"]
-#CMD ["-g","daemon off;"]
+ENTRYPOINT ["/usr/sbin/nginx"]
+CMD ["-g","daemon off;"]
