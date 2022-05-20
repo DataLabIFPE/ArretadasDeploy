@@ -2,12 +2,10 @@ server {
         listen 80;
 
         root /app-bi/;
-        
+        index index.html index.htm index.nginx-debian.html;
         server_name arretadas-bi.tk;
 
-        location = / {}
-    
-        location ~* \.(?:ico|css|js|gif|jpe?g|png|woff2|woff|ttf)$ {}
-    
-        location / {}
+        location / {
+                try_files $uri $uri/Login =404;
+        }
 }
