@@ -6,7 +6,9 @@ server {
         
         server_name arretadas-bi.tk;
 
-        location / {
-                try_files $uri $uri/index.html;
-              }
+        location = / {}
+    
+        location ~* \.(?:ico|css|js|gif|jpe?g|png|woff2|woff|ttf)$ {}
+    
+        location / {}
 }
