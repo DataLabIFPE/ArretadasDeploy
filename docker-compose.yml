@@ -1,24 +1,24 @@
 version: '3'
 services:
-  # nginx:
-  #   build:
-  #     context: Nginx/
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - '80:80'
-  #   networks:
-  #     - services
+  nginx:
+    build:
+      context: Nginx/
+      dockerfile: Dockerfile
+    ports:
+      - '80:80'
+    networks:
+      - services
 
-  # app-api:
-  #   build:
-  #     context: Arretadas-api/
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - '3000:3000'
-  #   networks:
-  #     - services
-  #   depends_on:
-  #     - app-bot
+  app-api:
+    build:
+      context: Arretadas-api/
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    networks:
+      - services
+    depends_on:
+      - app-bot
 
   app-bot:
     build:
@@ -28,6 +28,6 @@ services:
       - $pwd/tokens/:/usr/src/app/tokens
 
 
-# networks:
-#   services:
-#     driver: bridge
+networks:
+  services:
+    driver: bridge
