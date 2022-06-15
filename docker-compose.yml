@@ -1,13 +1,13 @@
 version: '3'
 services:
-  nginx:
-    build:
-      context: Nginx/
-      dockerfile: Dockerfile
-    ports:
-      - '80:80'
-    networks:
-      - services
+  # nginx:
+  #   build:
+  #     context: Nginx/
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - '80:80'
+  #   networks:
+  #     - services
 
   app-api:
     build:
@@ -26,6 +26,10 @@ services:
       dockerfile: Dockerfile
     volumes:
       - $pwd/tokens/:/usr/src/app/tokens
+
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: ./application_default_credentials.json
+    
 
 
 networks:
