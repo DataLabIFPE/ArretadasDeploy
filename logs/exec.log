@@ -1,0 +1,9 @@
+The pwd variable is not set. Defaulting to a blank string.
+Starting redis ... 
+Starting arretadasdeploy_nginx_1 ... 
+[1A[2KStarting arretadasdeploy_nginx_1 ... [32mdone[0m[1B
+ERROR: for redis  UnixHTTPConnectionPool(host='localhost', port=None): Read timed out. (read timeout=60)
+
+ERROR: for redis  UnixHTTPConnectionPool(host='localhost', port=None): Read timed out. (read timeout=60)
+An HTTP request took too long to complete. Retry with --verbose to obtain debug information.
+If you encounter this issue regularly because of slow network conditions, consider setting COMPOSE_HTTP_TIMEOUT to a higher value (current value: 60).
