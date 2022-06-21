@@ -1,6 +1,4 @@
 [submodule "Arretadas-api"]
 	path = Arretadas-api
 	url = git@github.com:DataLabIFPE/Arretadas-API.git
-[submodule "Arretadas-bot"]
-	path = Arretadas-bot
-	url = git@github.com:DataLabIFPE/Arretadas-bot.git
+
