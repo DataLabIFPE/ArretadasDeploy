@@ -17,20 +17,8 @@ services:
       - '3000:3000'
     networks:
       - services
-    depends_on:
-      - app-bot
     environment:
       GOOGLE_APPLICATION_CREDENTIALS: ./application_default_credentials.json 
-
-  app-bot:
-    build:
-      context: Arretadas-bot/
-      dockerfile: Dockerfile
-    volumes:
-      - $pwd/tokens/:/usr/src/app/tokens
-
-    environment:
-      GOOGLE_APPLICATION_CREDENTIALS: ./application_default_credentials.json
     
 
 
